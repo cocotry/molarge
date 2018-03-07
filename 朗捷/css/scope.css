@@ -1,0 +1,683 @@
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 10px 0;
+}
+.swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    overflow: hidden;
+}
+body{
+	background: #fff;
+}
+.header{
+	width: 100%;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	z-index: 2;
+}
+.header-body{
+	margin: 0 auto;
+}
+.scope-01-img-body{
+	position: relative;
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+}
+.scope-01-img{
+	background: url(../img/scope-phone-1-bg.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	width: 320px;
+	height: 263px;
+	position: absolute;
+	left: 0px;
+	bottom:0;
+	opacity: 0;
+}
+.scope-01-press{
+	width: 72px;
+	height: 124px;
+	margin: 14px 0 0 102px;
+	background: url(../img/scope-phone-1-bg-up.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	opacity: 0;
+}
+.scope-01-title{
+	font-size: 28px;
+	color: #2699e0;
+	margin-bottom: 15px;
+	opacity: 0;
+}
+.scope-01-brief{
+	font-size: 12px;
+	color: #333;
+	line-height: 20px;
+	margin-bottom: 10px;
+	opacity: 0;
+}
+.scope-01-font{
+	text-align: left;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -170px;
+}
+.scope-01-icon {
+	font-size: 14px;
+	color: #666;
+	text-align: center;
+	opacity: 0;
+}
+.scope-01-icon li div{
+	width: 50px;
+	height: 50px;
+	margin:0 auto 15px;
+	background-size: 100% 100%;
+}
+.scope-01-icon-a div{
+	background: url(../img/scope-1-icon-a.png) no-repeat;
+}
+.scope-01-icon-b div{
+	background: url(../img/scope-1-icon-b.png) no-repeat;
+}
+.scope-01-icon-c div{
+	background: url(../img/scope-1-icon-c.png) no-repeat;
+}
+.scope-01-icon li{
+	float: left;
+	margin-right: 35px;
+}
+.scope-01-icon .scope-01-icon-c{
+	margin-right: 0;
+}
+@keyframes scopeFont{
+	from{transform:scale(0);opacity: 0;}
+	to{transform: scale(1);opacity: 1;}
+}
+@keyframes scopePress{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+@keyframes scope01{
+	from{bottom:-500px;opacity: 0;}
+	to{bottom:0;opacity: 1;}
+}
+@media (min-width:768px){
+	.scope-01-img-body,.header-body{
+		width: 750px;
+		border: none;
+	}
+	.scope-01-img{
+		width: 600px;
+		height: 493px;
+		bottom:0;
+		left: 0;
+	}
+	.scope-01-font{
+		margin-top: -350px;
+	}
+	.scope-01-title{
+		font-size: 30px;
+		margin-bottom: 25px;
+	}
+	.scope-01-press{
+		width: 136px;
+		height: 231px;
+		margin: 27px 0 0 190px;
+		background-size: 100% 100%;
+	}
+	.scope-01-brief{
+		margin-bottom: 20px;
+		font-size: 14px;
+		line-height: 30px;
+	}
+	.scope-01-icon li{
+		margin-right: 70px;
+	}
+	.scope-01-font{
+		right: 130px;
+	}
+	.scope-01-icon li div{
+		width: 76px;
+		height: 76px;
+	}
+}
+@media (min-width:992px){
+	.scope-01-img-body,.header-body{
+		width: 970px;
+	}
+	.scope-01-img{
+		width: 736px;
+		height: 605px;
+		bottom:0;
+		left: -80px;
+	}
+	.scope-01-font{
+		right: 0px;
+		margin-top: -230px;
+	}
+	.scope-01-press{
+		width: 165px;
+		height: 282px;
+		margin: 34px 0 0 234px;
+	}
+	.scope-01-title{
+		font-size: 36px;
+	}
+	.scope-01-brief{
+		margin-bottom: 80px;
+		font-size: 16px;
+	}
+	.scope-01-icon li{
+		margin-right: 115px;
+	}
+}
+@media (min-width:1300px ) {
+	.scope-01-img-body,.header-body{
+		width: 1280px;
+	}
+	.scope-01-img{
+		background: url(../img/scope-1-bg.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+		width: 854px;
+		height: 702px;
+		bottom: 0;
+	}
+	.scope-01-font{
+		right: 130px;
+		margin-top: -230px;
+	}
+	.scope-01-press{
+		width: 192px;
+		height: 342px;
+		margin: 40px 0 0 270px;
+		background: url(../img/scope-1-bg-up.png) 0 0 no-repeat;
+	}
+}
+/********************2*************************/
+.scope-02{
+	background: url(../img/scope-phone-bg-02.jpg) 0 0 no-repeat;
+	width: 100%;
+	height: 100%;
+	background-size:100% 100%;
+	position: relative;
+}
+.scope-02-body{
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+.scope-02-font{
+	position: absolute;
+	top: 80px;
+	left: 0;
+	margin-left: 0;
+	width: 100%;
+}
+.scope-02-title{
+	color: #2699e0;
+	font-size: 30px;
+	opacity: 0;
+}
+.scope-02-brief{
+	color: #333;
+	font-size: 14px; 
+	margin: 25px 0 40px 0;
+	opacity: 0;
+}
+.scope-02-icon {
+	font-size: 14px;
+	color: #666;
+	margin: 0 auto;
+	overflow: hidden;
+	display: inline-block;
+	opacity: 0;
+}
+.scope-02-icon li div{
+	width: 50px;
+	height: 50px;
+	background-size: 100% 100%;
+	margin:0 auto 15px;
+}
+.scope-02-icon-a div{
+	background: url(../img/scope-2-icon-a.png) no-repeat;
+}
+.scope-02-icon-b div{
+	background: url(../img/scope-2-icon-b.png) no-repeat;
+}
+.scope-02-icon-c div{
+	background: url(../img/scope-2-icon-c.png) no-repeat;
+}
+.scope-02-icon li{
+	float: left;
+	margin-right: 35px;
+}
+.scope-02-icon .scope-02-icon-c{
+	margin-right: 0;
+}
+.scope-02-fire-a{
+	position: absolute;
+	margin-left: -280px;
+	bottom: 270px;
+	opacity: 0;
+}
+.scope-02-fire-b{
+	position: absolute;
+	left:-320px;
+	bottom: 170px;
+	opacity: 0;
+}
+@keyframes scope02Brief{
+	from{margin-top:300px;transform:scale(0);opacity: 0;}
+	to{margin-top:25px;transform:scale(1);opacity: 1;}
+}
+@keyframes scope02Font{
+	from{margin-top:300px;transform:scale(0);opacity: 0;}
+	to{margin-top:0px;transform:scale(1);opacity: 1;}
+}
+@media (min-width:768px){
+	.scope-02-body{
+		width: 750px;
+		border: none;
+	}
+	.scope-02-icon li div{
+		width: 76px;
+		height: 76px;
+	}
+	.scope-02-icon li{
+		margin-right: 115px;
+	}
+	.scope-02-font{
+		left: 50%;
+		margin-left: -229px;
+		width: auto;
+		top: 170px;
+	}
+	.scope-02-title{
+		font-size: 36px;
+	}
+	.scope-02-brief{
+		font-size: 16px; 
+		margin: 25px 0 60px 0;
+	}
+}
+@media (min-width:992px){
+	.scope-02-body{
+		width: 970px;
+	}
+	.scope-02{
+		background: url(../img/scope-2-bg.png) 0 0 no-repeat;
+		background-size:100% 100%;
+	}
+}
+@media (min-width:1300px ) {
+	.scope-02-body{
+		width: 1280px;
+	}
+}
+/**************************3**************************/
+.scope-03{
+	background: url(../img/scope-3-background.jpg) 0 0 no-repeat;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+}
+.scope-03-body{
+	margin: 0 auto 0;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+.scope-03-img{
+	position: absolute;
+	top: 10%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 150px;
+}
+.scope-03-computer{
+	width:178px;
+	height: 148px;
+	background: url(../img/scope-3-bga.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	display: inline-block;
+	opacity: 0;
+}
+.scope-03-phone{
+	width: 68px;
+	height: 67px;
+	background: url(../img/scope-3-bgb.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 0;
+	right: -40px;
+	margin: 0 auto;
+	opacity: 0;
+}
+.scope-03-title{
+	font-size: 26px;
+	color: #2699e0;
+	opacity: 0;
+}
+.scope-03-app,.scope-03-website{
+	color: #333;
+	font-size: 14px;
+	width: calc(100% - 20px);
+	padding: 0 10px;
+	display: inline-block;
+	text-align: left;
+	line-height: 22px;
+	opacity: 0;
+	margin-top: 20px;
+}
+.scope-03-app{
+	margin-right: 0;
+}
+.scope-03-app span,.scope-03-website span{
+	font-size: 14px;
+	color: #1a1a1a;
+}
+.scope-03-font{
+	position: absolute;
+	bottom: 16%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+@keyframes scope03Computer{
+	from{margin-top:-100px;opacity: 0;}
+	to{margin-top:0px;opacity: 1;}
+}
+@keyframes scope03Phone{
+	from{bottom:-200px;opacity: 0;}
+	to{bottom:-45px;opacity: 1;}
+}
+@keyframes scope03title{
+	from{margin-bottom:500px;opacity: 0;}
+	to{margin-bottom:0px;opacity: 1;}
+}
+@media (min-width:768px){
+	.scope-03-body{
+		width: 750px;
+		border: none;
+	}
+	.scope-03-app{
+		margin-right: 60px;
+	}
+	.scope-03-computer{
+		width: 315px;
+		height: 220px;
+	}
+	.scope-03-phone{
+		width: 120px;
+		height: 100px;
+	}
+	.scope-03-img{
+		height: 222px;
+	}
+	.scope-03-phone{
+		right: -90px;
+	}
+	.scope-03-title{
+		font-size: 32px;
+	}
+	.scope-03-app,.scope-03-website{
+		margin-top: 30px;
+		font-size: 16px;
+		line-height: 32px;
+		width: 340px;
+		padding: 0;
+	}
+	.scope-03-app span,.scope-03-website span{
+		font-size: 16px;
+	}
+	.scope-03-font{
+		bottom: 20%;
+	}
+	@keyframes scope03Phone{
+		from{bottom:-200px;opacity: 0;}
+		to{bottom:-65px;opacity: 1;}
+	}
+}
+@media (min-width:992px){
+	.scope-03-body{
+		width: 970px;
+	}
+	.scope-03-computer{
+		width: 407px;
+		height: 268px;
+	}
+	.scope-03-phone{
+		width: 155px;
+		height: 121px;
+	}
+	.scope-03-app{
+		margin-right: 60px;
+	}
+	.scope-03-img{
+		height: 251px;
+	}
+	@keyframes scope03Phone{
+		from{bottom:-200px;opacity: 0;}
+		to{bottom:-100px;opacity: 1;}
+	}
+	.scope-03-phone{
+		right: -140px;
+	}
+}
+@media (min-width:1300px ) {
+	.scope-03-body{
+		width: 1280px;
+	}
+	.scope-03-computer{
+		width: 42%;
+		height: 99%;
+	}
+	.scope-03-phone{
+		width: 16%;
+		height: 45%;
+	}
+	.scope-03-app{
+		margin-right: 70px;
+	}
+	.scope-03-img{
+		height: 36%;
+	}
+	.scope-03-font{
+		bottom: 16%;
+	}
+	.scope-03-title{
+		font-size: 36px;
+	}
+	.scope-03-app,.scope-03-website{
+		margin-top: 50px;
+	}
+}
+/***************************4*******************************/
+.scope-04{
+	background: url(../img/scope-4-background.png) 0 0 no-repeat;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+}
+.scope-04-body{
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+.scope-04-left{
+	position: absolute;
+	left: -320px;
+	top: 0;
+	bottom: auto;
+	opacity: 0;
+}
+.scope-4-phone-img01{
+	position: absolute;
+	width: 81px;
+	height: 150px;
+	display: block;
+}
+.scope-4-img01{
+	position: absolute;
+	display: none;
+}
+.scope-4-img02{
+	margin-left:65px;
+	width: 80px;
+	height: 106px;
+}
+.scope-04-title{
+	color: #fff;
+	font-size: 28px;
+	margin-bottom: 30px;
+	opacity: 0;
+	text-align: center;
+}
+.scope-04-brief{
+	font-size: 14px;
+	padding: 0 10px;
+	color: #e6e5e6;
+	line-height: 22px;
+	opacity: 0;
+}
+.scope-04-icon{
+	margin-top: 35px;
+	opacity: 0;
+}
+.scope-04-icon li{
+	width: 48px;
+	height: 48px;
+	float:left;
+	margin-right: 20px;
+}
+.scope-04-icon li:last-child{
+	margin-right: 0;
+}
+.scope-04-font{
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	margin-top: -188px;
+	left: 0;
+	text-align: left;
+	z-index: 1;
+}
+.scope-04-right{
+	position: absolute;
+	right: 0;
+	bottom:0;
+	opacity: 0;
+	width: 150px;
+	height: 220px;
+}
+.scope-04-right img{
+	width: 100%;
+	height: 100%;
+}
+@keyframes scope04Left{
+	from{left:-520px;top:-400px;opacity: 0;}
+	to{left:-15px;top:0;opacity: 1;}
+}
+@keyframes scope04Right{
+	from{margin-bottom:-200px;opacity: 0;}
+	to{margin-bottom: 0;opacity: 1;}
+}
+@media (min-width:768px){
+	.scope-04-body{
+		width: 750px;
+		border: none;
+	}
+	.scope-04-right{
+		right: 0;
+		width: 270px;
+		height: 399px;
+	}
+	.scope-4-phone-img01{
+		width: 185px;
+		height: 343px;
+		margin-left: -65px;
+	}
+	.scope-4-img02{
+		width: 165px;
+		height: 218px;
+		margin-left: 100px;
+		margin-top: 55px;
+	}
+	.scope-04-font{
+		margin-top: -125px;
+		left: 165px;
+	}
+	.scope-04-title{
+		font-size: 36px;
+		text-align: left;
+	}
+	.scope-04-icon li{
+		margin-right: 38px;
+	}
+	.scope-04-icon{
+		margin-top: 80px;
+	}
+	.scope-04-brief{
+		font-size: 16px;
+		padding: 0;
+		line-height: 26px;
+	}
+	@keyframes scope04Left{
+		from{left:-520px;bottom:-238px;opacity: 0;}
+		to{left:-55px;bottom:70px;opacity: 1;}
+	}
+}
+@media (min-width:992px){
+	.scope-04-body{
+		width: 970px;
+	}
+	.scope-04-right{
+		width: 372px;
+		height: 559px;
+		top:50%;
+	}
+	.scope-4-img01{
+		width: 397px;
+		height: 393px;
+		display: block;
+	}
+	.scope-4-img02{
+		width: 268px;
+		height: 350px;
+		margin-left: 358px;
+		margin-top: 0;
+	}
+	.scope-04-font{
+		margin-top: -188px;
+	}
+	.scope-04-left{
+		bottom: 0;
+		top: auto;
+	}
+	.scope-4-phone-img01{
+		display: none;
+	}
+	@keyframes scope04Left{
+		from{left:-520px;bottom:-238px;opacity: 0;}
+		to{left:-320px;bottom:38px;opacity: 1;}
+	}
+	@keyframes scope04Right{
+		from{margin-top:0;opacity: 0;}
+		to{margin-top: -185px;opacity: 1;}
+	}
+}
+@media (min-width:1300px ) {
+	.scope-04-body{
+		width: 1280px;
+	}
+	.scope-04-right{
+		right: 114px;
+	}
+}

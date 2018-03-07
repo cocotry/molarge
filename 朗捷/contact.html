@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title></title>
+		<link rel="stylesheet" href="css/css.css" />
+		<link rel="stylesheet" href="css/contact.css" />
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=PSGDO96ZzxBUijinzhN6PajEn75enP1c"></script>
+	</head>
+	<body>
+		<div class="contact">
+			<div class="header">
+				<div class="logo">
+					<img src="img/logo.png"/>
+				</div>
+				<ul class="nav">
+					<li>
+						<a href="index.html">首頁</a>
+					</li>
+					<li>
+						<a href="about.html">關於我們</a>
+					</li>
+					<li>
+						<a href="scope.html">業務範疇</a>
+					</li>
+					<li>
+						<a href="case.html">成功案例</a>
+					</li>
+					<li>
+						<a href="new.html">最新資訊</a>
+					</li>
+					<li class="active">
+						<a href="contact.html">聯繫我們</a>
+					</li>
+				</ul>
+				<div class="index-nav-icon">
+					<span class="icon"></span>
+					<span class="icon"></span>
+					<span class="icon"></span>
+				</div>
+				<ul class="index-nav">
+					<li>
+						<a href="index.html">首頁</a>
+					</li>
+					<li>
+						<a href="about.html">關於我們</a>
+					</li>
+					<li>
+						<a href="scope.html">業務範疇</a>
+					</li>
+					<li>
+						<a href="case.html">成功案例</a>
+					</li>
+					<li>
+						<a href="new.html">最新資訊</a>
+					</li>
+					<li class="active">
+						<a href="contact.html">聯繫我們</a>
+					</li>
+				</ul>
+			</div>
+			<div class="contact-brief">
+				<p class="contact-title">
+					聯繫我們
+				</p>
+				<p class="contact-brief-details">
+					簡單的文字介紹簡單的文字介紹簡單的文字介紹簡單的文字介紹簡單的文字介紹簡單的文字介紹簡單的文字介紹簡單的文字介紹簡單的文字介紹
+				</p>
+			</div>
+			<div class="contact-body">
+				<div class="contact-body-left">
+					<p class="contact-left-title">聯繫方式</p>
+					<ul>
+						<li class="contact-left-tel">
+							<span></span>
+							<p>0756-86985456</p>
+						</li>
+						<li class="contact-left-qq">
+							<span></span>
+							<p>256845874</p>
+						</li>
+						<li class="contact-left-email">
+							<span></span>
+							<p>haihang@qq.com</p>
+						</li>
+						<li class="contact-left-address">
+							<span></span>
+							<p>廣東省珠海市香洲區夏美路128號（金龍大廈）2201</p>
+						</li>
+					</ul>
+					<div id="map"></div>
+				</div>
+				<div class="contact-body-right">
+					<p class="contact-right-tltle">留言反饋</p>
+					<form action="" class="contact-body-form">
+						<div class="contact-right-name contact-input">
+							<span>姓名</span>
+							<input type="text" class="name" name="name" value="" />
+						</div>
+						<div class="contact-right-tel contact-input">
+							<span>手機</span>
+							<input type="tel" class="tel" name="tel" value=""/>
+						</div>
+						<div class="contact-right-qq contact-input">
+							<span>QQ&nbsp;</span>
+							<input type="text" class="qq" name="qq" value=""/>
+						</div>
+						<div class="contact-right-email contact-input">
+							<span>郵箱</span>
+							<input type="email" class="email" name="email" value=""/>
+						</div>
+						<div class="contact-right-message">
+							<span>留言</span>
+							<textarea rows="" cols="" class="message" name="message"></textarea>
+						</div>
+						<input type="submit" class="submit" id="submit" value=""/>
+					</form>
+				</div>
+				<div class="contact-footer">
+					朗捷科技资讯（澳门）有限公司   2010-2016年  版权所有
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js" ></script>
+	<script>
+		$('.index-nav-icon').click(function(){
+			$('.index-nav').slideToggle();
+		})
+		 //获取地图
+    var map = new BMap.Map("map");    // 创建Map实例
+	var point = new BMap.Point(113.576681,22.283311);
+	map.centerAndZoom(point, 15);
+	setTimeout(function(){
+		map.setZoom(14);   
+	}, 2000);  //2秒后放大到14级
+	map.enableScrollWheelZoom(true);
+	var myIcon = new BMap.Icon("0202.png", new BMap.Size(300,157));
+	var marker = new BMap.Marker(point);  // 创建标注
+	map.addOverlay(marker);               // 将标注添加到地图中
+	marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+	
+	var n1,n2,n3,n4;
+$(".tel").blur(function(){
+	var telTest=/^(13|14|15|17|18)\d{9}$/;
+	var zhi=$(".tel").val();
+	if(!telTest.test(zhi)){
+		$(".tel").val("您输入的格式不正确").css("color","red");
+	    n1=false;
+	}else{
+		n1=true;
+	}
+});
+$(".tel").focus(function(){
+		$(".tel").val("").css("color","black");
+});
+	$(".email").blur(function(){
+		var emailTest=/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+		var zhi=$(".email").val();
+		if(!emailTest.test(zhi)){
+		$(".email").val("您输入的格式不正确").css("color","red");
+	        n2=false;
+		}else{
+			n2=true;
+		}
+	});
+	$(".email").focus(function(){
+		$(".email").val("").css("color","black");
+	});
+	$(".qq").blur(function(){
+		var qqTest = /^[1-9][0-9]{4,10}$/; 
+		var zhi=$(".qq").val();
+		if(!qqTest.test(zhi)){
+		$(".qq").val("您输入的格式不正确").css("color","red");
+	        n4=false;
+		}else{
+			n4=true;
+		}
+	});
+	$(".qq").focus(function(){
+		$(".qq").val("").css("color","black");
+	});
+	
+function checkUser(obj,name){
+  	$(obj).blur(function() {
+	  	var zhi=$(obj).val();
+	    if (zhi=='') {
+			$(obj).val(name+"不能为空").css("color","red");
+		    n3=false;
+			}else{
+			n3=true;
+		}
+	});
+	$(obj).focus(function(){
+		$(obj).val("").css("color","black");
+	});
+}
+checkUser(".name",'姓名');
+checkUser(".message",'内容');
+var $contactForm = $(".contact-body-form");
+$contactForm.on('submit', function (event) {
+	var name = $.trim($(this).find('input[name=name]').val());
+	var tel = $.trim($(this).find('input[name=tel]').val());
+	var email = $.trim($(this).find('input[name=email]').val());
+	var qq = $.trim($(this).find('input[name=qq]').val());
+	var message = $.trim($(this).find('textarea[name=message]').val());
+	if(name.length==0 || tel.length==0 || message.length==0 || qq.length==0 || email.length==0){
+		$('.name').val("内容不能为空").css("color","red");
+		return false;
+	}
+	if(n1 == false || n2 == false || n3 == false || n4 == false) {
+		event.preventDefault(); 
+	}
+})
+	</script>
+</html>
